@@ -9,7 +9,7 @@
 	export default {
 		data() {
 			return {
-				textareaVal:''
+				textareaVal:'',
 			}
 		},
 		onLoad() {
@@ -25,8 +25,7 @@
 				    title: '加载中'
 				});
 				uni.request({
-					//url:'http://localhost:8081/add',
-					url:'http://123.56.237.188/add',
+					url:'https://jinchensite.com/api/add',
 					data:{
 						content:this.textareaVal
 					},
@@ -37,14 +36,15 @@
 						    duration: 2000
 						});
 					},
-					fail() {
+					fail(e) {
+						console.log(e)
 						uni.showToast({
 						    title: 'error',
 						    duration: 2000
 						});
 					},
 					complete() {
-						 uni.hideLoading();
+						 //uni.hideLoading();
 					}
 				})
 			}
