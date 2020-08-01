@@ -25,10 +25,13 @@
 				    title: '加载中'
 				});
 				uni.request({
-					url:'http://qq.com',
-					data:'',
-					success() {
-						
+					//url:'http://localhost:8081/add',
+					url:'http://123.56.237.188/add',
+					data:{
+						content:this.textareaVal
+					},
+					success(res) {
+						console.log('res',res)
 						uni.showToast({
 						    title: '添加成功',
 						    duration: 2000
