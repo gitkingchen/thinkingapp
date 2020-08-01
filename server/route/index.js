@@ -1,7 +1,7 @@
 var router = require('express').Router();
 var Idea = require('../db/schemas');
 
-router.get('/add', async function (req, res, next) {
+router.get('/api/add', async function (req, res, next) {
     try {
 
         var content = req.query.content;
