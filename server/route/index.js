@@ -1,6 +1,7 @@
 var router = require('express').Router();
 var Idea = require('../db/schemas');
 
+
 router.get('/getList', async function (req, res, next) {
 
     try {
